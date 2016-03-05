@@ -1,10 +1,12 @@
 ---
 layout: post
-title:  "Test blogpost"
+title:  "Test content shorttip"
 date:   2016-01-31 16:11:49 +0100
-tag: post
+tag: shorttipps
 ---
-This is a first test blog post Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+This is test content for a shorttip 
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
