@@ -6,7 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Jannik Müller Frontend Developer
+title: Jannik Müller
 email: hi@jannikmueller.com
 description: > # Hi, i'm Jannik Müller, a berlin based Frontend Developer.
 baseurl: "" # the subpath of your site, e.g. /blog
