@@ -1,13 +1,11 @@
 ---
-layout: default
+layout: page
+title: Blog
 ---
 
 <div class="blog">
-
-	<h1 class="page-heading"><a href="/blog">Blog</a></h1>
 	
 	<div class="filter">
-		<h3>Filter:</h3>
 			<ul>
 				<li><a href="/blog-shorttipps"> Shortipps</a></li>
 				<li><a href="/blog-posts">Blogposts</a></li>
@@ -21,11 +19,12 @@ layout: default
 					<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} category: {{ post.tag}}</span>
 
 					<h2>
-						<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+						{{ post.title }}
 					</h2>
 					{% if post.description %}
 						<p> {{ post.description }}</p>
 					{% endif %}
+					<a class="tile-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} </a>
 				</li>
 			{% endif %}
 
@@ -34,11 +33,12 @@ layout: default
 					<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} category: {{ post.tag}}</span>
 
 					<h2>
-						<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+						{{ post.title }}
 					</h2>
 					  <div class="post-content" itemprop="articleBody">
 					    {{ post.content }}
 					  </div>
+					  <a class="tile-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} </a>
 				</li>
 			{% endif %}
 		{% endfor %}

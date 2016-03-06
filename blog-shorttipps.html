@@ -1,19 +1,15 @@
 ---
-layout: default
-title: blogroll
+layout: page
+title: Blog
 permalink: /blog-shorttipps
 ---
 
 
 
-<div class="blog">
-
-  <h1 class="page-heading"><a href="/blog">Blog</a></h1>
-  
+<div class="blog">  
   <div class="filter">
-    <h3>Filter:</h3>
       <ul>
-        <li><a class="selected" href="/blog-shorttipps"> Shortipps</a></li>
+        <li><a class="selected" href="/blog"> Shortipps</a></li>
         <li><a href="/blog-posts">Blogposts</a></li>
       </ul>
   </div>
@@ -22,10 +18,15 @@ permalink: /blog-shorttipps
     {% for post in site.posts %}
       {% if post.tag == "shorttipps" %}
         <li>
-          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} category: {{ post.tag}}</span>
+
           <h2>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            {{ post.title }}
           </h2>
+            <div class="post-content" itemprop="articleBody">
+              {{ post.content }}
+            </div>
+            <a class="tile-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} </a>
         </li>
       {% endif %}
     {% endfor %}
