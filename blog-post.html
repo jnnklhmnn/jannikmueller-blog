@@ -1,10 +1,20 @@
 ---
-layout: page
+layout: default
 permalink: /blog-posts
 ---
 
 
-<div class="blogroll">
+<div class="blog">
+
+  <h1 class="page-heading"><a href="/blog">Blog</a></h1>
+  
+  <div class="filter">
+    <h3>Filter:</h3>
+      <ul>
+        <li><a href="/blog-shorttipps"> Shortipps</a></li>
+        <li><a class="selected" href="/blog-posts">Blogposts</a></li>
+      </ul>
+  </div>
 
   <ul class="post-list">
     {% for post in site.posts %}

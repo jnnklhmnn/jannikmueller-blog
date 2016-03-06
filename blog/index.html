@@ -2,25 +2,48 @@
 layout: default
 ---
 
-<div class="home">
+<div class="blog">
 
-  <h1 class="page-heading">Blog</h1>
-  <h3>Filter:</h3>
-  <h4><a href="/blog-shorttipps"> Shortipps</a></h4>
-  <h4><a href="/blog-posts">Blogposts</a></h4>
+	<h1 class="page-heading"><a href="/blog">Blog</a></h1>
+	
+	<div class="filter">
+		<h3>Filter:</h3>
+			<ul>
+				<li><a href="/blog-shorttipps"> Shortipps</a></li>
+				<li><a href="/blog-posts">Blogposts</a></li>
+			</ul>
+	</div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+	<ul class="post-list">
+		{% for post in site.posts %}
+			{% if post.tag == "post" %}
+				<li>
+					<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} category: {{ post.tag}}</span>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+					<h2>
+						<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+					</h2>
+					{% if post.description %}
+						<p> {{ post.description }}</p>
+					{% endif %}
+				</li>
+			{% endif %}
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+			{% if post.tag == "shorttipps" %}
+				<li>
+					<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} category: {{ post.tag}}</span>
+
+					<h2>
+						<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+					</h2>
+					  <div class="post-content" itemprop="articleBody">
+					    {{ post.content }}
+					  </div>
+				</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+
+	<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
