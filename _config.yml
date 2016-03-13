@@ -13,6 +13,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.jannikm.spica.uberspace.de" # the base hostname & protocol for your site
 twitter_username: JnnkMllr
 github_username:  jnnkm
+instagram_username: jannik_on_instagram 
+xing_username: Jannik_Mueller2
+linkedin_username: jannikmueller
 
 # Build settings
 markdown: kramdown
