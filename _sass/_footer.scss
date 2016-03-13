@@ -1,0 +1,40 @@
+.site-footer {
+
+	.icon > svg {
+		width: 25px;
+		height: 25px;
+	}
+
+	.footer-col {
+		text-align: center;
+
+		@include grid-break($on-laptop) {
+			float: left;
+		}
+
+	}
+
+	.social-media-list {
+		height: 3em;
+		width: 12.285em;
+		display: block; 
+		margin: 0 auto;
+
+		@include grid-break($on-laptop) {
+			margin: inherit;
+			float: left;
+		 	width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+    		width: calc(20% - (#{$spacing-unit} / 2));
+		}
+	}
+
+	.contact-list {
+
+		@include grid-break($on-laptop) {
+			text-align: left;
+		}
+		
+	}
+
+	
+}

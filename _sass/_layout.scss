@@ -100,6 +100,11 @@
 .site-footer {
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
+    font-size: 0.8em;
+
+    a {
+        font-size: 0.8em;
+    }
 }
 
 .footer-heading {
@@ -113,15 +118,25 @@
     margin-left: 0;
 }
 
+.social-media-list{
+    ul, li {
+        display: inline;
+    }
+
+    li {
+        float: left;
+        margin: 0 0.4em;
+    }
+}
+
 .footer-col-wrapper {
-    font-size: 15px;
+    font-size: 11px;
     color: $grey-color;
     margin-left: -$spacing-unit / 2;
     @extend %clearfix;
 }
 
 .footer-col {
-    float: left;
     margin-bottom: $spacing-unit / 2;
     padding-left: $spacing-unit / 2;
 }
@@ -142,10 +157,13 @@
 }
 
 @include media-query($on-laptop) {
-    .footer-col-1,
     .footer-col-2 {
         width: -webkit-calc(50% - (#{$spacing-unit} / 2));
         width:         calc(50% - (#{$spacing-unit} / 2));
+    }
+
+    .footer-col-1 {
+        width: 100%;
     }
 
     .footer-col-3 {
@@ -156,7 +174,6 @@
 
 @include media-query($on-palm) {
     .footer-col {
-        float: none;
         width: -webkit-calc(100% - (#{$spacing-unit} / 2));
         width:         calc(100% - (#{$spacing-unit} / 2));
     }
