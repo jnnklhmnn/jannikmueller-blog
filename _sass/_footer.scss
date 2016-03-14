@@ -14,17 +14,24 @@
 
 	}
 
+	.footer-col-3 {
+		@include grid-break($on-laptop) {
+			text-align: left;
+		}
+	}
+
+
 	.social-media-list {
 		height: 3em;
-		width: 12.285em;
+		width: 15.39em;
 		display: block; 
 		margin: 0 auto;
 
 		@include grid-break($on-laptop) {
 			margin: inherit;
 			float: left;
-		 	width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    		width: calc(20% - (#{$spacing-unit} / 2));
+		 	width: -webkit-calc(30% - (#{$spacing-unit} / 2));
+    		width: calc(30% - (#{$spacing-unit} / 2));
 		}
 	}
 
@@ -33,7 +40,7 @@
 		@include grid-break($on-laptop) {
 			text-align: left;
 		}
-		
+
 	}
 
 	
