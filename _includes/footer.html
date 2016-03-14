@@ -35,6 +35,11 @@
 							{% include icon-xing.html username=site.xing_username %}
 						</li>
 					{% endif %}
+
+						<li>
+							<a  class="feedlink"href="{{ "/feed.xml" | prepend: site.baseurl }}"><span class="icon icon--rss">{% include icon-rss.svg %}</span>
+							</a>
+						</li>
 				</ul>
 			</div>
 
