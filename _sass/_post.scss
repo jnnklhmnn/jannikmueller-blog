@@ -1,0 +1,14 @@
+.backlink {
+
+	padding-bottom: 1em;
+
+	.icon {
+		> svg {
+			padding-bottom: 4px;
+
+			path {
+				fill: #000000;
+			}
+		}
+	}
+}
