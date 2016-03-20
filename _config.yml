@@ -8,9 +8,9 @@
 # Site settings
 title: Jannik Müller
 email: hi@jannikmueller.com
-description: > # Hi, i'm Jannik Müller, a berlin based Frontend Developer.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.jannikm.spica.uberspace.de" # the base hostname & protocol for your site
+description: Hi, i'm Jannik Müller, a berlin based Frontend Developer.
+# baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://jannikmueller.com" # the base hostname & protocol for your site
 twitter_username: JnnkMllr
 github_username:  jnnkm
 instagram_username: jannik_on_instagram 
