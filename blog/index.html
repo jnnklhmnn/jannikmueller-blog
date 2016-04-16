@@ -14,7 +14,6 @@ title: Blog
 
 	<ul class="post-list">
 		{% for post in site.posts %}
-			{% if post.tag == "post" %}
 				<li>
 					<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} category: {{ post.tag}}</span>
 
@@ -26,24 +25,7 @@ title: Blog
 					{% endif %}
 					<a class="tile-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} </a>
 				</li>
-			{% endif %}
-
-			{% if post.tag == "shorttipps" %}
-				<li>
-					<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} category: {{ post.tag}}</span>
-
-					<h2>
-						{{ post.title }}
-					</h2>
-					  <div class="post-content" itemprop="articleBody">
-					    {{ post.content }}
-					  </div>
-					  <a class="tile-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} </a>
-				</li>
-			{% endif %}
 		{% endfor %}
 	</ul>
-
-	<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
